@@ -1,5 +1,5 @@
 work
-==== 
+====  
 contains tminus1_9_input_5_output_motivator.
 
 XOR
