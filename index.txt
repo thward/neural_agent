@@ -1,0 +1,180 @@
+work
+==== 
+contains tminus1_9_input_5_output_motivator.
+
+XOR
+===
+temperature: 0.15
+Supports:
+(s)upervised 	(b)ackpropagation		~2180 iterations
+(s)upervised 	(r)LA						~311 iterations
+(p)rimary 		(b)ackpropagation		~7550 iterations
+(p)rimary 		(r)LA						~450 iterations
+
+
+
+
+tminus1_9_input_5_output_motivator
+==================================
+temperature: 0.15
+Supports:									iterations from cell 	2			5				4				3				0
+(s)upervised 	(b)ackpropagation																									330
+(s)upervised 	(r)LA																													9000 (requires learn rate 0.75 !!!)
+(c)onditioned 	(b)ackpropagation										1800  	25000			50000			80000			90000
+(c)onditioned 	(r)LA 	   											500  		6000			50000			18000			~ !!ToDo (0.5 base reward, learn rate 1.0)
+
+9 square maze (cell 1 is blocked off):
+0 1 2
+3 4 5
+6 7 8
+
+
+
+Has reward input node & reward output node.
+Uses "calcOutputPat.h".
+
+
+tminus1_9_input_5_output_motivator_target
+=========================================
+temperature: 1.0
+Based on tminus1_9_input_5_output_motivator
+
+Simple target tracking.
+(c)onditioned 	(b)ackpropagation - set to Primary (see below)   116816 *can only learn 1 step
+(c)onditioned 	(b)ackpropagation		110324
+(c)onditioned 	(r)LA 	   				59865
+
+By default calcpat.h has Primary (not Conditioned) reinforcement enabled by simply disabling the output reward node; can be toggled to give Conditioned reinforcement. The learning mode is set to (c)onditioned for both.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+robot_2_input_2_output_camera
+=============================
+13/7/2015
+
+To be used with arduino sketch H_Bridge_Keyboard_Control_Camera
+
+2 light input: 
+
+   0: direction; -1 left, 0 centre +1 right
+   1: on/off governor
+
+2 hidden nodes 
+2 motor output: 
+
+	0: direction; 		<0.5 left , 		>0.5 right
+	1: governor;      <0.5 stop , 		>0.5 go
+
+
+bluetooth connectivity
+
+
+robot_1_input_2_output_camera
+=============================
+13/7/2015
+
+To be used with arduino sketch H_Bridge_Keyboard_Control_Camera
+
+1 light input:
+2 hidden nodes 
+2 motor output: 
+
+	0: direction; 		<0.5 left , 		>0.5 right
+	1: governor;      <0.5 stop , 		>0.5 go
+
+
+bluetooth connectivity
+
+
+robot_1_input_2_output
+======================
+8/6/2015
+
+To be used with arduino sketch H_Bridge_Keyboard_Control
+
+1 light input:
+2 hidden nodes 
+2 motor output: 
+
+	0: direction; 		<0.5 left , 		>0.5 right
+	1: governor;      <0.5 stop , 		>0.5 go
+
+
+bluetooth connectivity
+
+
+
+
+
+
+tminus1_4_input_3_output_motivator
+==================================
+Supports bTminus1
+Has reward input node & reward output node.
+Uses "calcOutputPat.h".
+
+learns in # epochs: 
+Supervised BP : 8,000
+Unsupervised bTminus1 = 'N' : N/A
+Unsupervised bTminus1 = 'Y' : 1,800
+
+
+
+3_point_world_new  
+=================
+Does NOT support bTminus1
+Has reward input node only.
+
+calcDesiredInputOutputPatterns for this calculates the desired output for the current input pattern, unlike
+tminus1_4_input_3_output_motivator which calculates desired output for the previous input pattern. It could have been 
+coded similarly but then it would be retricted to bTminus1 = 'Y' learing, instead it is restricted to bTminus1 = 'N' learning.
+
+  //                    desired
+  // pattern 1:  0 0 0   0 0 0
+  // pattern 2:  0 0 1   0 0 1
+  // pattern 3:  0 1 0   0 1 0
+  // pattern 4:  1 0 0   1 0 0  
+
+learns in # epochs: 
+Supervised BP : 500
+Unsupervised bTminus1 = 'N' : 1,400
+Unsupervised bTminus1 = 'Y' : N/A
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+tminus1_4_input_2_output
+========================
+Supports bTminus1
+Has reward input node, does not have reward output node but uses bAllStrong instead.
+Uses "calcOutputPat.h".
+
+
+three_point_world_hard
+======================
++++BROKEN SINCE T-1 INTRODUCED, USE 3_point_world_new INSTEAD+++
+Does NOT support bTminus1
+Has reward input node only.
+Does not use "calcOutputPat.h", but should do.
+
+  //                    desired
+  // pattern 1:  0 0 0   0 0 0
+  // pattern 2:  0 0 1   0 0 1
+  // pattern 3:  0 1 0   0 1 0  
+  // pattern 3b: 0 1 1   0 1 1
+  // pattern 4:  1 0 0   1 0 0
+  // pattern 4b: 1 1 0   1 1 0
+  // pattern 5:  1 1 1   1 1 1
+
