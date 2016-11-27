@@ -1,0 +1,23 @@
+[Breakpoint 0]
+Enabled=true
+File=neural.c
+Line=798
+Temporary=false
+
+[General]
+DebuggerCmdStr=
+DriverName=GDB
+FileVersion=1
+OptionsSelected=
+ProgramArgs=
+TTYLevel=7
+WorkingDirectory=/home/tom/Desktop/Link to Stuff/common/neural/mystuff
+
+[Memory]
+ColumnWidths=80,0
+NumExprs=0
+
+[Watches]
+Expr0=repeatCount
+Expr1=inputPatternSetSize
+Expr2=number_of_output_nodes
