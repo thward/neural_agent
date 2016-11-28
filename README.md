@@ -7,6 +7,7 @@ Reinforcement Learning (RL) source code for [A Threshold-based Scheme for Reinfo
 - Threshold Assignment of Patterns (TAP): primary Reinforcement with action creation 
 - Threshold Assignment of Rewards (TAR): conditioned Reinforcement
 - Threshold Assignment of Connections (TAC): biologically inspired alternative to backpropagation
+- Bluetooth connectivity for Arduino micro-controller
  
 
 see instructions.txt for more info
