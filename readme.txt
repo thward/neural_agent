@@ -10,20 +10,20 @@ netfile.txt - controls network:
 	THRESHOLD
 	TEMPERATURE
 	ITERATIONS
-   LOG_LEVEL; 0 (low), 1 (high), 2 (high + weights)
+    LOG_LEVEL; 0 (low), 1 (high), 2 (high + weights)
 	BLUETOOTH_ENABLED; (y)es or (n)o - applicable to (d)irect, (i)ndirect only
 	LEARNING_MODE; (s)upervised, (p)rimary, (c)onditioned/secondary
-   REINFORCEMENT_LEARNING;  (b)ackpropagation, (r)RLA
+	REINFORCEMENT_LEARNING;  (b)ackpropagation, (r)RLA
 
 
 Compatibiity matrix:
 
 BLUETOOTH_ENABLED	LEARNING_MODE    REINFORCEMENT_LEARNING    
-n						s                b/r*                    
+n					s                b/r*                    
 y/n					p                b/r
 y/n					c                b
 
-*This was fudge to directly compare RLA against normal supervised backpropagation. RLA should really occur with (p)rimary, (c)onditioned learning modes.
+*This allows direct comparison of RLA against normal supervised backpropagation. RLA should naturally only occur with (p)rimary, (c)onditioned learning modes.
 
 Outputs
 =======
