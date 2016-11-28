@@ -1,4 +1,14 @@
 
+Build & Run
+===========
+cd work
+./delete_and_run.sh
+
+
+Sample experiments
+==================
+The /work folder contains the default experiment. The default experiment can be replaced with the contents of a sample experiment (eg /xor), or hand crafted (see below).
+
 
 Inputs
 ======

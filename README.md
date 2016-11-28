@@ -1,16 +1,14 @@
 #Reinforcement Learning Neural Network
 
-Source code for [A Threshold-based Scheme for Reinforcement Learning in Neural Networks](https://arxiv.org/abs/1609.03348) 
+Reinforcement Learning (RL) source code for [A Threshold-based Scheme for Reinforcement Learning in Neural Networks](https://arxiv.org/abs/1609.03348) 
 
 ##Features
-- Supervised & Unsupervised () backpropagation
-- Supervised & Unsupervised backpropagation
+- Supervised & Unsupervised (RL) backpropagation
+- Threshold Assignment of Patterns (TAP): primary Reinforcement with action creation 
+- Threshold Assignment of Rewards (TAR): conditioned Reinforcement
+- Threshold Assignment of Connections (TAC): biologically inspired alternative to backpropagation
  
 
 see instructions.txt for more info
 
-##Build & Run
-
-cd work
-./delete_and_run.sh
 
