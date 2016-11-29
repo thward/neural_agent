@@ -32,29 +32,15 @@
 // networks, and generic advantages, we should perhaps do an explicit check 
 // to see if the node is a target (and has source nodes).
 
-// Momentum, temperature and threshold are not even used ???!!!
-
 // ****** The use of node_num_p is bit specific, can we get rid of it?
 
-// ****** Not sure why presentInputPattern returns the type it does (it is a parameter also !)
-
 // ****** readInputPatternFile/readOutputPatternFile and printInputPatterns/printOutputPatterns can surely be merged
-
-// ****** Need to add error to node structure
 
 // ****** Maybe rename node/node to input_activation/output_activation so 
 //        consistent with node structure
 
 // ****** Merge presentInputPattern & calculateOutputError
 
-// - We have put in a lot of effort here to determine what the network looks like from 
-// minimal amount of info supplied. Perhaps we should not have done this here if at all. 
-// It saves the user from specifying all the nodes and the connections, but it not normalised.
-// Maybe separate out this functionality into a pre-processing function.
-// USEFUL ENHANCEMENT: 
-// -- save connections to connections.txt at end of processing
-// -- when launching program if connections.txt provided use that else createRandomWeights
-//
 // - There is no neccesity to record the fact that a node is a bias node. All node activations
 // initialise as specified in nodes.txt. Bias node always remain at this level of activation because they have no inputs 
 // (see forward propagation function), so the defination of a bias node is really just the fact 
