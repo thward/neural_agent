@@ -311,6 +311,16 @@ float activationFunction(float input)
     AF = (1/(1+exp(( - input )/TEMPERATURE)));
     //???	LAF = (1/(1+exp(-(activation_supplied-THRESHOLD)/TEMPERATURE)));
 
+	// threshold step function works with RLA..	
+	/*
+	if (input > 0.5){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+	*/
+
     
     
     return AF;
