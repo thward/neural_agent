@@ -32,8 +32,6 @@
 // networks, and generic advantages, we should perhaps do an explicit check 
 // to see if the node is a target (and has source nodes).
 
-// ****** The use of node_num_p is bit specific, can we get rid of it?
-
 // ****** readInputPatternFile/readOutputPatternFile and printInputPatterns/printOutputPatterns can surely be merged
 
 // ****** Maybe rename node/node to input_activation/output_activation so 
