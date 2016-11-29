@@ -954,9 +954,9 @@ float calculateError(float desired, float actual)
     // 0.5 * (1-0.5) = 0.25
     // 0.9 * (1-0.9) = 0.09
     // 0.1 * (1-0.1) = 0.09
-    //ERROR = (desired - actual) * actual * (1 - actual);
+    	ERROR = (desired - actual) * actual * (1 - actual);
     // Just for fun .. 
-    ERROR = (desired - actual) *  0.20; // This actually appears to work, but not tested with XOR
+    //ERROR = (desired - actual) *  0.20; // This actually appears to work
     
     
     return ERROR;
