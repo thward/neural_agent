@@ -114,8 +114,6 @@ int     inputPatternSetSize = 0;
 
 int number_of_input_nodes, number_of_output_nodes;
 
-float logisticActivationFunction(float input);
-
 int patternElementLearnt(float desired, float actual);
 
 
@@ -311,16 +309,21 @@ float activationFunction(float input)
     AF = (1/(1+exp(( - input )/TEMPERATURE)));
     //???	LAF = (1/(1+exp(-(activation_supplied-THRESHOLD)/TEMPERATURE)));
 
-	// threshold step function works with RLA..	
-	/*
-	if (input > 0.5){
-      return 1;
-    }
-    else{
-      return 0;
-    }
-	*/
-
+  //  if (input > 0.5)
+  //  {
+  //    return 1;
+  //  }
+  //  else{
+  //    return 0;
+  //  }
+    
+  //  if (AF > 0.5)
+  //  {
+  //   return AF;
+  //  }
+  //  else{
+  //    return 0;
+  //  }
     
     
     return AF;
@@ -931,7 +934,7 @@ forwardPropagate()
             
 	}// not input layer
 	
-	if (node_current->node_type != 'Y') // Leave Bias node activations alone..
+	if (node_current->node_type != 'B') // Leave Bias node activations alone..
 	{
 	  tminus1activation = node_current -> node_activation;
 	  node_current -> node_tminus1_activation = tminus1activation;
