@@ -37,5 +37,5 @@ y/n					c                b
 
 Outputs
 =======
-connections_out.txt - weights after learning
+connections_out.txt - weights after learning, can be used as input if renamed to connections.txt
 logfile.txt
