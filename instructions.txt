@@ -35,6 +35,7 @@ y/n					c                b
 
 *This allows direct comparison of RLA against normal supervised backpropagation. RLA should naturally only occur with (p)rimary, (c)onditioned learning modes.
 
+
 Outputs
 =======
 connections_out.txt - weights after learning, can be used as input if renamed to connections.txt
