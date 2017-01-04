@@ -309,21 +309,29 @@ float activationFunction(float input)
     AF = (1/(1+exp(( - input )/TEMPERATURE)));
     //???	LAF = (1/(1+exp(-(activation_supplied-THRESHOLD)/TEMPERATURE)));
 
-  //  if (input > 0.5)
-  //  {
-  //    return 1;
-  //  }
-  //  else{
-  //    return 0;
-  //  }
     
-  //  if (AF > 0.5)
-  //  {
-  //   return AF;
-  //  }
-  //  else{
-  //    return 0;
-  //  }
+  // Note; thresholds are applied outside of this activation calculation. In forwardPropagate and rewardLearning, and also in the environment for motors. This
+  // preserves the activation value itself for debugging, even if it is below threshold.
+  //   
+  /*  if (input > 0.0) //OK for rewardLearning
+    {
+      return 1;
+    }
+    else{
+      return 0;
+    }
+    */
+    
+  /*
+    if (AF > 0.5)  //NOK for rewardLearning
+   // if (AF >= 0.5) //OK for rewardLearning, but slow
+    {
+     return AF;
+    }
+    else{
+      return 0;
+    }
+*/
     
     
     return AF;
