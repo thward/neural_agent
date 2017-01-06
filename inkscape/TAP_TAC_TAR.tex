@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{calc}
+\newlength{\maxmin}
+\setlength{\maxmin}{\widthof{$\max$}-\widthof{$\min$}}
+
+\begin{document}
+\begin{equation}
+  d_{u(t)}=
+  \begin{cases}
+    \begin{cases}
+      1 & \text{if $a_{u(t)} \textgreater \theta_{u}$  } \\
+      0 & \text{otherwise}
+    \end{cases}    &\text{if $a_{r(t+1)} \textgreater \theta_{r}$  }\\
+    \begin{cases}
+      U[0.45 .. 0.55] & \hspace{\maxmin}  \\
+    \end{cases}    &\text{otherwise}
+  \end{cases}
+\end{equation}
+
+\begin{equation}
+  d_{u(t)}=
+  \begin{cases}
+      \text{$ \gamma a_{u(t+1)} $} 		& \text{if $a_{u(t+1)} \textgreater \theta_{u}$  } \\
+      \text{0} & \text{otherwise}
+  \end{cases}
+\end{equation} 
+
+\begin{equation}
+  d_{u(t)}=
+  	\begin{cases}
+  	
+	  \begin{cases}
+	    \begin{cases}
+	      1 & \text{if $a_{u(t)} \textgreater \theta_{u}$  } \\
+	      0 & \text{otherwise}
+	    \end{cases}	    &\text{if $a_{r(t+1)} \textgreater \theta_{r}$  }\\
+	    \begin{cases}
+	      U[0.45 .. 0.55] & \hspace{\maxmin}  \\
+	    \end{cases}	    &\text{otherwise}
+	  \end{cases} &\text{if $a_{h(t)} \textgreater \theta_{h}$  }
+	  
+	  \\
+	  
+	  \begin{cases}
+	      a_{u(t)}
+	  \end{cases} &\text{otherwise}
+	  
+	\end{cases}
+\end{equation}
+
+
+
+\end{document}
+
+
