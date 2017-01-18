@@ -310,9 +310,11 @@ float activationFunction(float input)
     //???	LAF = (1/(1+exp(-(activation_supplied-THRESHOLD)/TEMPERATURE)));
 
     
-  // Note; thresholds are applied outside of this activation calculation. In forwardPropagate and rewardLearning, and also in the environment for motors. This
-  // preserves the activation value itself for debugging, even if it is below threshold.
-  //   
+  // Note; thresholds are applied outside of this activation calculation. In forwardPropagate and rewardLearning, and also in the environment for motors. 
+  // The activation value must be preserved because even though it is not required for the pre-synaptic neuron, it is still relevant for the post synaptic neuron:
+  // ie connect_current ->connect_weight = connect_current->connect_weight + (LEARNING_RATE * node_current_target->node_delta * node_current_source->node_activation);
+  // It is also useful for debugging, even if it is below threshold.
+  // 
   /*  if (input > 0.0) //OK for rewardLearning
     {
       return 1;
