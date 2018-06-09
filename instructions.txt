@@ -30,7 +30,7 @@ Compatibiity matrix:
 BLUETOOTH_ENABLED	LEARNING_MODE    REINFORCEMENT_LEARNING    
 n					s                b/r*                    
 y/n					p                b/r
-y/n					c                b
+y/n					c                b/r
 
 *This allows direct comparison of RLA against normal supervised backpropagation. RLA should naturally only occur with (p)rimary, (c)onditioned learning modes.
 
